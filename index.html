@@ -11,14 +11,16 @@
 </head>
 
 <body>
+
+    
     <!-- ---header--- -->
     <div id="header">
         <div class="container">
             <nav>
                 <h1 class = logo>Rong</h1>
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About</a></li>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
                     <li><a href="">Experiences</a></li>
                     <li><a href="">Projects</a></li>
                     <li><a href="">Contact</a></li>
@@ -30,6 +32,7 @@
             </div>
         </div>
     </div>
+
     <!-- ---about--- -->
     <div id="about">
         <div class="container">
@@ -70,6 +73,7 @@
     </div>
 
 <script>
+
     var tablinks = document.getElementsByClassName("tab-links")
     var tabcontents = document.getElementsByClassName("tab-contents")
     
@@ -82,7 +86,6 @@
         }
         event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab")
-
     }
 
 </script>
