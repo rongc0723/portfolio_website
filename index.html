@@ -42,24 +42,24 @@
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque, quasi maxime est blanditiis odit labore asperiores nam aut consequuntur natus ab neque nostrum vero voluptate, dolor voluptatum soluta maiores modi.</p>
                     <div class="tab-titles">
                         <p class = "tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class = "tab-links" onclick="opentab('experience')">Experiences</p>
+                        <p class = "tab-links" onclick="opentab('experiences')">Experiences</p>
                         <p class = "tab-links" onclick="opentab('education')">Education</p>
                     </div>
-                    <div class="tab-contents active-tab">
+                    <div class="tab-contents active-tab" id="skills">
                         <ul>
                             <li><span>Languages<br></span>Dev</li>
                             <li><span>OS<br></span>Dev</li>
                             <li><span>Technologies<br></span>Dev</li>
                         </ul>
                     </div>
-                    <div class="tab-contents">
+                    <div class="tab-contents" id="experiences">
                         <ul>
                             <li><span>Jul 2022 - Aug 2022<br></span>Database Intern at Youth4AM</li>
                             <li><span>Sep 2021 - Dec 2021<br></span>Cashier at the GSU</li>
                             <li><span>Sep 2020 - Jun 2021<br></span>Chemistry TA at TBLS</li>
                         </ul>
                     </div>
-                    <div class="tab-contents">
+                    <div class="tab-contents" id="education">
                         <ul>
                             <li><span>2021 - Present<br></span>BA from Boston University</li>
                         </ul>
@@ -68,6 +68,23 @@
             </div>
         </div>
     </div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links")
+    var tabcontents = document.getElementsByClassName("tab-contents")
     
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+
+    }
+
+</script>
 </body>
 </html>
